@@ -1,0 +1,52 @@
+#ipad版接口会员
+
+##模型：member
+
+###登录 login
+
+成功后保存session
+
+参数：
+* username
+* password
+
+返回：
+
+* info 会员资料
+
+###退出 logout
+
+参数：无
+返回：无，status状态值中标识即可
+
+###会员历史消费记录列表 payList
+
+默认按消费时间逆序排序
+
+参数：
+* page
+* perpage
+
+返回：
+* list 历史消费记录
+* total 总计消费次数
+
+###会员历史消费详情 payInfo
+
+参数：
+
+* id 历史消费记录的索引id
+
+返回：
+
+* info　消费的所有菜的详情，包括价格、评分等
+
+###修改密码 changePassword
+
+参数：
+
+* 旧密码 oldpassword
+* 新密码 newpassword
+
+返回：
+status状态值中标识即可。
